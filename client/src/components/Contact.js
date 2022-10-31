@@ -1,18 +1,6 @@
 import React from 'react';
 
 function Contact() {
-    fetch("https://jsonplaceholder.typicode.com/users")
-        .then(res => res.json())
-        .then(data => {
-            console.log(data);
-            let contactsList = [];
-            for (let i = 0; i <= data.len; i++) {
-                // add critical data to object to call later when generating the page
-                contactsList.push({fullName: data[i].name, email: data[i].email});
-            }
-            console.log(contactsList);
-        });
-
     return (
         <div>
             <h1>Contacts</h1>
